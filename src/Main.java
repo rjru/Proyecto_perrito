@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Vector;
 
 public class Main {
     public static void main(String[] args) {
@@ -49,6 +50,18 @@ public class Main {
         System.out.println("Soy un HashMap: " + id_perritos.get("0003").getNombre());
         System.out.println("Soy un HashMap: " + id_perritos.get("0004").getNombre());
 
+        // EJEMPLO DE USO DE VECTORES.
+        Vector<Perrito> vectorPerritos = new Vector<Perrito>();
+        int i = 1;
+        while(i <= 10){
+            Perrito perrito_temporal = new Perrito("Callejerito");
+            perrito_temporal.setNombre("Firualis Zombie #" + i);
+            vectorPerritos.add(perrito_temporal);
+            i++;
+        }
+        for(Perrito p : vectorPerritos){
+            System.out.println(p.getNombre());
+        }
     }
 
 }
